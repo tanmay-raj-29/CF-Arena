@@ -7,7 +7,5 @@ from .serializers import ProblemSerializer
 @api_view(['GET'])
 def problemList(request):
     problems = Problem.objects.all()
-    print(problems)
     serializer = ProblemSerializer(problems, many=True)
-    print(serializer)
     return Response(serializer.data)
