@@ -9,21 +9,21 @@ def get_contests():
     Contest.objects.all().delete()
 
     data = get_data(URL)
-
-    if data == [] or not "result" in data:
+    
+    if data == []:
         print("No data found")
         return
     
-    contest_list = data["result"]
+    contest_list = data
 
     for contest in contest_list:
-        if contest.phase != "FINISHED":
+        if contest['phase'] != "FINISHED":
             continue
         
         contest_obj = Contest(
-            contest_id = contest.id,
-            contest_duration = contest.durationSeconds, 
-            name = contest.name,
+            contest_id = contest['id'],
+            contest_duration = contest['durationSeconds'], 
+            name = contest['name'],
         )
     
         contest_obj.save()
