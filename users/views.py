@@ -18,7 +18,7 @@ class Login(generics.GenericAPIView):
             user = User.objects.get(email = request.data['email'])
         
             userData = User.objects.filter(email = serializer.data['email']).values('id', 'email', 'is_active', 'is_staff', 'is_superuser')
-            print(userData)
+
             return Response({'result' : serializer.data, 'userData' : userData, 'code' : status.HTTP_200_OK, 'status' : status.HTTP_200_OK}) 
         
         except Exception:
