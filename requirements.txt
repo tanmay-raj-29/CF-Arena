@@ -7,11 +7,13 @@ Django==4.0
 django-cors-headers==3.11.0
 django-filter==21.1
 djangorestframework==3.13.1
+djangorestframework-simplejwt==5.1.0
 filelock==3.4.2
 importlib-metadata==4.10.0
 Markdown==3.3.6
 pipenv==2021.11.23
 platformdirs==2.4.1
+PyJWT==2.3.0
 pytz==2021.3
 six==1.16.0
 sqlparse==0.4.2
