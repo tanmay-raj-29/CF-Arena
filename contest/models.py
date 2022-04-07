@@ -1,6 +1,6 @@
 import profile
 from django.db import models
-from user.models import Profile
+from users.models import Profile
 
 # Create your models here.
 class Contest(models.Model):
