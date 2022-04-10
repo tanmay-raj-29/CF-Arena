@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
     'django_filters',
+    'channels',
     # local apps
     'users',
     'problem',
@@ -82,6 +83,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'CF_Arena.wsgi.application'
 AUTH_USER_MODEL = 'users.User'
 
+ASGI_APPLICATION = "CF_Arena.asgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
