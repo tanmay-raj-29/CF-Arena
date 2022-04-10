@@ -48,7 +48,9 @@ INSTALLED_APPS = [
     'users',
     'problem',
     'duel',
-    'contest'
+    'contest',
+    'team',
+    'match'
 ]
 
 MIDDLEWARE = [
@@ -80,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'CF_Arena.wsgi.application'
+# WSGI_APPLICATION = 'CF_Arena.wsgi.application'
 AUTH_USER_MODEL = 'users.User'
 
 ASGI_APPLICATION = "CF_Arena.asgi.application"
@@ -115,8 +117,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(days = 7),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days = 30),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=7),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
     'SIGNING_KEY': SECRET_KEY,
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True
