@@ -21,7 +21,6 @@ class MatchCreate(generics.GenericAPIView):
             duration=request.data.get(
                 'duration', Match._meta.get_field('duration').get_default())
         )
-        for problem_id in problems:
-            match.problems.add(problem_id)
+        match.problems.add(*problems)
         serializer = MatchSerializer(match)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
