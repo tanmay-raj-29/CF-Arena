@@ -6,6 +6,7 @@ from problem.models import Problem
 
 
 class Match(models.Model):
+    match_name = models.CharField(max_length=25, unique=True, null=True, db_index=True)
     problems = models.ManyToManyField(Problem)
     team1 = models.OneToOneField(
         Team, null=True, on_delete=models.SET_NULL, related_name='first_team')
@@ -15,4 +16,4 @@ class Match(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.team1.name + " | " + self.team2.name
+        return self.match_name
