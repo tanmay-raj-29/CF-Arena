@@ -21,6 +21,6 @@ urlpatterns = [
     path('problem/', include('problem.urls')),
     path('contest/', include('contest.urls')),
     path('user/', include('users.urls')),
-    path('match/', include('match.urls')),
+    path('duel/', include('duel.urls')),
     path('team/', include('team.urls')),
 ]

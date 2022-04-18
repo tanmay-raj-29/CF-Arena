@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('match', '0002_initial'),
+        ('duel', '0002_initial'),
     ]
 
     operations = [

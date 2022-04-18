@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('match', '0001_initial'),
+        ('duel', '0001_initial'),
         ('team', '0001_initial'),
     ]
 
@@ -17,11 +17,13 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='match',
             name='team1',
-            field=models.OneToOneField(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='first_team', to='team.team'),
+            field=models.OneToOneField(
+                null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='first_team', to='team.team'),
         ),
         migrations.AddField(
             model_name='match',
             name='team2',
-            field=models.OneToOneField(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='second_team', to='team.team'),
+            field=models.OneToOneField(
+                null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='second_team', to='team.team'),
         ),
     ]
